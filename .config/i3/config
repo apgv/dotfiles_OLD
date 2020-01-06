@@ -185,3 +185,14 @@ exec --no-startup-id xautolock -time 10 -locker i3lock-fancy
 
 # wifi applet
 exec --no-startup-id nm-applet
+
+# https://wiki.archlinux.org/index.php/Libinput
+# find device id 'xinput list' 
+# find device props 'xinput list-props <device_id>'
+
+# touchpad
+## enable tap to click
+exec_always --no-startup-id xinput set-prop 13 273 1
+
+## natural scrolling
+exec_always --no-startup-id xinput set-prop 13 281 1
