@@ -182,3 +182,6 @@ exec --no-startup-id xrandr --output eDP-1 --mode 2048x1152
 
 # auto screen lock
 exec --no-startup-id xautolock -time 10 -locker i3lock-fancy
+
+# wifi applet
+exec --no-startup-id nm-applet
