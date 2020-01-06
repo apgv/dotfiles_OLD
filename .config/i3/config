@@ -232,3 +232,11 @@ bindsym $mod+ctrl+e exec --no-startup-id gedit
 bindsym $mod+ctrl+"F8" exec --no-startup-id notify-send protonvpn "`sudo protonvpn disconnect`"
 bindsym $mod+ctrl+"F9" exec --no-startup-id notify-send protonvpn "`sudo protonvpn status`"
 bindsym $mod+ctrl+"F10" exec --no-startup-id notify-send protonvpn "`sudo protonvpn connect --fastest`"
+
+# automatically putting clients on specific workspaces
+assign [class="Slack"] 1
+assign [class="jetbrains-datagrip"] 2
+assign [class="jetbrains-idea"] 2
+assign [class="jetbrains-pycharm"] 2
+assign [class="Firefox"] 3
+
