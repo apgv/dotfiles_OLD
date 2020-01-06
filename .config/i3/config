@@ -217,3 +217,18 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 
 # JetBrains
 exec /home/pedro/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+
+# program launchers
+bindsym $mod+l exec --no-startup-id i3lock-fancy
+bindsym $mod+ctrl+f exec --no-startup-id firefox
+bindsym $mod+ctrl+t exec --no-startup-id /home/pedro/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+bindsym $mod+ctrl+d exec --no-startup-id /home/pedro/jetbrains-shell-scripts/datagrip
+bindsym $mod+ctrl+i exec --no-startup-id /home/pedro/jetbrains-shell-scripts/idea
+bindsym $mod+ctrl+p exec --no-startup-id /home/pedro/jetbrains-shell-scripts/pycharm
+bindsym $mod+ctrl+o exec --no-startup-id nautilus
+bindsym $mod+ctrl+m exec --no-startup-id spotify
+bindsym $mod+ctrl+s exec --no-startup-id slack
+bindsym $mod+ctrl+e exec --no-startup-id gedit
+bindsym $mod+ctrl+"F8" exec --no-startup-id notify-send protonvpn "`sudo protonvpn disconnect`"
+bindsym $mod+ctrl+"F9" exec --no-startup-id notify-send protonvpn "`sudo protonvpn status`"
+bindsym $mod+ctrl+"F10" exec --no-startup-id notify-send protonvpn "`sudo protonvpn connect --fastest`"
