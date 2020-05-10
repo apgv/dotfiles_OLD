@@ -190,3 +190,6 @@ exec_always --no-startup-id redshift -P -O 3500
 
 # set screen resolution
 exec --no-startup-id xrandr --output eDP-1 --mode 2048x1152
+
+# auto screen lock
+exec_always --no-startup-id xautolock -time 5 -locker i3lock -c 333333
