@@ -179,3 +179,8 @@ bindsym $mod+p mode "resize"
 bar {
         status_command i3status
 }
+
+# personal modifications
+
+# remap caps lock
+exec_always setxkbmap -option caps:escape
