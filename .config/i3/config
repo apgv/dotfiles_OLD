@@ -204,3 +204,21 @@ exec_always --no-startup-id xinput set-prop 13 273 1
 
 ## natural scrolling
 exec_always --no-startup-id xinput set-prop 13 281 1
+
+# JetBrains
+exec /home/pedro/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+
+# program launchers
+bindsym $mod+l exec --no-startup-id i3lock -c 333333 
+bindsym $mod+ctrl+f exec --no-startup-id firefox
+bindsym $mod+ctrl+t exec --no-startup-id /home/pedro/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox
+bindsym $mod+ctrl+i exec --no-startup-id /home/pedro/jetbrains-shell-scripts/idea
+bindsym $mod+ctrl+o exec --no-startup-id nautilus
+bindsym $mod+ctrl+m exec --no-startup-id spotify
+bindsym $mod+ctrl+s exec --no-startup-id slack
+bindsym $mod+ctrl+e exec --no-startup-id gedit
+
+# automatically putting clients on specific workspaces
+assign [class="Slack"] 1
+assign [class="jetbrains-idea"] 2
+assign [class="Firefox"] 3
