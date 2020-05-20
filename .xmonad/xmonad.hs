@@ -248,6 +248,8 @@ myStartupHook = do
 		spawn "setxkbmap -option caps:escape"
 		-- turn on blue light filter
 		spawn "redshift -P -O 3500"
+		-- set screen resolution
+		spawn "xrandr --output eDP-1-1 --mode 2048x1152"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
