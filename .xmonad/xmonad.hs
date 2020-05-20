@@ -62,6 +62,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
+    -- lock screen
+    , ((modm .|. controlMask, xK_l     ), spawn "i3lock -f -c 333333")
+
     -- launch dmenu
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
@@ -258,6 +261,8 @@ myStartupHook = do
 		spawn "xinput set-prop 13 305 1"
 		-- touchpad natural scrolling
 		spawn "xinput set-prop 13 313 1"
+		-- auto screen lock
+		spawn "xautolock -time 5 -locker 'i3lock -f -c 333333'"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
