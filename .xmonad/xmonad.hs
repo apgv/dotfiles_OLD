@@ -8,6 +8,7 @@
 --
 
 import XMonad
+import XMonad.Util.EZConfig
 import Data.Monoid
 import System.Exit
 
@@ -298,7 +299,12 @@ defaults = def {
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook
-    }
+    }`additionalKeysP`
+    [ (("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"))
+    , (("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -10%"))
+    , (("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +10%"))
+    , (("<XF86AudioMicMute>", spawn "pactl set-source-mute @DEFAULT_SOURCE@ toggle"))
+    ]	
 
 -- | Finally, a copy of the default bindings in simple textual tabular format.
 help :: String
